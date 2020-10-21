@@ -1,0 +1,76 @@
+.nav-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(66, 80, 91);
+}
+
+.logo-container {
+    background-color: rgb(92, 111, 125);
+    height: 100%;
+    display: flex;
+    padding: 12px 24px 12px 24px;
+}
+
+.logo-container > img {
+    width: 136px;
+}
+
+.spacer {
+    width: 50%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: rgb(215, 215, 215);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    font-family: "Open Sans";
+}
+
+nav > div {
+    margin: 0px -6px 0px 6px;
+    padding: 2px;
+    border-left: 1px solid rgb(215, 215, 215);
+    width: 100%;
+}
+
+nav > div.navitem > a {
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: rgb(215, 215, 215);
+    text-decoration-line: none;
+}
+
+nav > div.navitem > a.active {
+    border-bottom: 4px solid rgb(236, 134, 67);
+}
+
+nav > div.navitem > a:hover {
+    color: rgb(236, 134, 67);
+}
+
+span#username-icon {
+    font-family: 'Font Awesome 5 Pro Solid', 'Font Awesome 5 Pro';
+    font-weight: 900;
+    font-style: normal;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-right: 12px;
+}
+
+/* TODO: Why is the kerning so crowded? Compare with mockup. */
+span#username {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    font-family: "Open Sans Bold", "Open Sans";
+    color: rgb(244, 249, 253);
+}

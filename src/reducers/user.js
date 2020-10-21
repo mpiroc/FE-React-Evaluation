@@ -1,7 +1,7 @@
 import { AUTHENTICATE_USER } from '../action-types/user'
 
 export default function user(state = initialUserState, action) {
-    switch (action.type) {
+    switch (action && action.type) {
         case AUTHENTICATE_USER:
             return {
                 ...initialUserState,

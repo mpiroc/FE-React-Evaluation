@@ -1,4 +1,4 @@
-import { user } from './user';
+import user from './user';
 import { authenticateUser } from '../action-creators'
 
 it('initializes state when called without state', () => {
