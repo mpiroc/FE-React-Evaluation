@@ -24,7 +24,6 @@ function App() {
     );
     console.log(`userName: ${userName}`)
 
-    /*
     if (!userName) {
         return (
             <div className="App">
@@ -35,7 +34,6 @@ function App() {
             </div>
         );
     }
-    */
 
     return (
         <div className="App">
