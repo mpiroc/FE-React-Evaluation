@@ -31,6 +31,8 @@ nav {
     font-style: normal;
     font-size: 12px;
     font-family: "Open Sans";
+    max-width: 600px;
+    padding-right: 12px;
 }
 
 nav > div {

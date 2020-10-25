@@ -1,0 +1,26 @@
+.type-value {
+    padding: 3px 6px 3px 6px;
+}
+
+.type-sport {
+    color: rgb(244, 249, 253);
+    background-color: rgb(25, 136, 100);
+}
+
+.type-game {
+    color: rgb(244, 249, 253);
+    background-color: rgb(86, 25, 136)
+}
+
+.type-unknown {
+    color: rgb(244, 249, 253);
+    background-color: darkgray;
+}
+
+.size-small {
+    font-size: 10px
+}
+
+.size-normal {
+    font-size: 14px;
+}
