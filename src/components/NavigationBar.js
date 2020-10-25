@@ -8,7 +8,7 @@ export default function NavigationBar() {
     const username = useSelector(state => state.user.userName);
 
     return (
-        <div class='nav-container'>
+        <div className='nav-container'>
             <div className='logo-container'>
                 <img className='logo' src={logo} alt='no.inc logo' />
             </div>
