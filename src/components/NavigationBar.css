@@ -40,18 +40,20 @@ nav > div {
     width: 100%;
 }
 
-nav > div.navitem > span {
+nav > div.navitem > a {
     margin-left: 24px;
     margin-right: 24px;
     padding-top: 4px;
     padding-bottom: 4px;
+    color: rgb(215, 215, 215);
+    text-decoration-line: none;
 }
 
-nav > div.navitem.current > span {
+nav > div.navitem > a.active {
     border-bottom: 4px solid rgb(236, 134, 67);
 }
 
-nav > div.navitem > span:hover {
+nav > div.navitem > a:hover {
     color: rgb(236, 134, 67);
 }
 
@@ -61,8 +63,10 @@ span#username-icon {
     font-style: normal;
     font-size: 14px;
     color: #FFFFFF;
+    margin-right: 12px;
 }
 
+/* TODO: Why is the kerning so crowded? Compare with mockup. */
 span#username {
     font-size: 13px;
     font-style: normal;

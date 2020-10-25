@@ -18,7 +18,10 @@ function App() {
     console.log('test return', fakeSkills);
 
     // TODO: Remove equality func after converting store to ImmutableJS.
-    const userName = useSelector(state => state.user.userName, (left, right) => left.user.userName === right.user.userName);
+    const userName = useSelector(
+        state => state.user.userName,
+        (left, right) => left.user.userName === right.user.userName
+    );
     console.log(`userName: ${userName}`)
 
     /*
@@ -43,13 +46,13 @@ function App() {
             </Helmet>
             <NavigationBar />
             <Switch>
-                <Route path="/">
+                <Route exact path="/">
                     <Home />
                 </Route>
-                <Route path="/interests">
+                <Route exact path="/interests">
                     <Interests />
                 </Route>
-                <Route path="/skills">
+                <Route exact path="/skills">
                     <Skills />
                 </Route>
             </Switch>

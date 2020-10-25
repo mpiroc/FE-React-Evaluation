@@ -1,18 +1,11 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import logo from '../logo.png';
 import './NavigationBar.css';
+import { useSelector } from 'react-redux';
 
 export default function NavigationBar() {
-    const location = useLocation()
-
-    function getClassName(route) {
-        if (route === location.pathname) {
-            return 'navitem current'
-        }
-
-        return 'navitem'
-    }
+    const username = useSelector(state => state.user.userName);
 
     return (
         <div class='nav-container'>
@@ -22,11 +15,11 @@ export default function NavigationBar() {
             
             <div className='spacer'>.</div>
             <nav>
-                <div className={getClassName('/')}><span>Home</span></div>
-                <div className={getClassName('/interests')}><span>Navigation 2</span></div>
-                <div className={getClassName('/skills')}><span>Navigation 3</span></div>
+                <div className='navitem'><NavLink exact to='/'>Home</NavLink></div>
+                <div className='navitem'><NavLink exact to='/interests'>Interests</NavLink></div>
+                <div className='navitem'><NavLink exact to='/skills'>Skills</NavLink></div>
                 <div>
-                    <span id='username'><span id='username-icon'></span> Username</span>
+                    <span id='username'><span id='username-icon'></span>{username}</span>
                 </div>
             </nav>
         </div>
