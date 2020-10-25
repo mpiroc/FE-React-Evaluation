@@ -5,7 +5,7 @@ import './NavigationBar.css';
 import { useSelector } from 'react-redux';
 
 export default function NavigationBar() {
-    const username = useSelector(state => state.user.userName);
+    const username = useSelector(state => state.user.get('userName'));
 
     return (
         <div className='nav-container'>

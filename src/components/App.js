@@ -13,14 +13,14 @@ import NavigationBar from './NavigationBar';
 import Skills from './Skills';
 import { Helmet } from 'react-helmet'
 
-function App() {
+export default function App() {
     console.log('test return', fakeInterests);
     console.log('test return', fakeSkills);
 
-    // TODO: Remove equality func after converting store to ImmutableJS.
     const userName = useSelector(
-        state => state.user.userName,
-        (left, right) => left.user.userName === right.user.userName
+        state => state.user.get('userName'),
+        // store.user is an immutable map, so we can do a shallow comparison here.
+        (left, right) => left.user === right.user
     );
     console.log(`userName: ${userName}`)
 
@@ -58,8 +58,4 @@ function App() {
             </Switch>
         </div>
     )
-
-    
 }
-
-export default App;

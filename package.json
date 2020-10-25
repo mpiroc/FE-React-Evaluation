@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "immutable": "^4.0.0-rc.12",
     "moment": "^2.24.0",
     "mutationobserver-shim": "^0.3.7",
     "react": "^16.10.1",
