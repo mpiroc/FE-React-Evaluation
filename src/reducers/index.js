@@ -1,4 +1,10 @@
 import {combineReducers} from 'redux';
-import user from "./user";
+import user from './user';
+import interest from './interest'
+import skill from './skill'
 
-export default combineReducers({user});
+export default combineReducers({
+    interest,
+    skill,
+    user,
+});
