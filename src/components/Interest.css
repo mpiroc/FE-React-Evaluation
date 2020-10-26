@@ -1,0 +1,35 @@
+.interest-container {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding: 30px 18px 30px 18px;
+
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.interest-container > div {
+    flex: 1;
+}
+
+.interest-name-container {
+    margin-bottom: 18px;
+}
+
+.interest-name-container > span {
+    font-size: 32px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: normal;
+}
+
+.interest-badge-container {
+    margin-bottom: 30px;
+}
+
+.interest-detail-container > span {
+    font-size: 13px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: normal;
+}

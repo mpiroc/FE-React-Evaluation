@@ -15,7 +15,7 @@ export default function InterestCardCollection({ max }) {
         
     return (
         <div className='interests-container'>
-            {interestIds.map(id => <InterestCard id={id} />)}
+            {interestIds.map(id => <InterestCard id={id} key={id} />)}
         </div>
     )
 }

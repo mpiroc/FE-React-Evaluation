@@ -16,9 +16,10 @@
 }
 
 .interest-size-small {
-    font-size: 10px
+    font-size: 10px;
 }
 
 .interest-size-normal {
     font-size: 14px;
+    padding: 3px 12px 3px 12px;
 }

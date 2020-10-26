@@ -15,7 +15,7 @@ export default function SkillCardCollection({ max }) {
         
     return (
         <div className='skills-container'>
-            {skillIds.map(id => <SkillCard id={id} />)}
+            {skillIds.map(id => <SkillCard id={id} key={id} />)}
         </div>
     )
 }

@@ -7,6 +7,7 @@ import {
 import { useSelector, useDispatch } from 'react-redux'
 import { fakeInterests, fakeSkills } from "../dummy-data";
 import Home from './Home';
+import Interest from './Interest'
 import Interests from './Interests';
 import Login from './Login';
 import NavigationBar from './NavigationBar';
@@ -88,6 +89,9 @@ export default function App() {
                 </Route>
                 <Route exact path="/skills">
                     <Skills />
+                </Route>
+                <Route path="/interest/:id">
+                    <Interest />
                 </Route>
             </Switch>
         </div>
