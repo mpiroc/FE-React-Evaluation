@@ -2,7 +2,8 @@ import React from 'react';
 import './SkillCard.css'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
-import SkillTypeBadge from './SkillTypeBadge'
+import TypeBadge from './TypeBadge'
+import { SKILL_TYPE_MAP } from '../type-maps'
 
 // TODO: Make interests and skills more DRY.
 export default function InterestCard({ id }) {
@@ -19,7 +20,7 @@ export default function InterestCard({ id }) {
             <div className='skill-property-value'><span>{skill.get('name')}</span></div>
 
             <div className='skill-property-label'><span>Type:</span></div>
-            <div><SkillTypeBadge type={type} size='small' /></div>
+            <div><TypeBadge typeMap={SKILL_TYPE_MAP} type={type} size='small' /></div>
         </div>
     )
 }

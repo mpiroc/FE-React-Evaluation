@@ -2,7 +2,8 @@ import React from 'react';
 import './InterestCard.css'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
-import InterestTypeBadge from './InterestTypeBadge'
+import TypeBadge from './TypeBadge'
+import { INTEREST_TYPE_MAP } from '../type-maps'
 
 export default function InterestCard({ id }) {
     const interest = useSelector(state => state.interest.get(id))
@@ -18,7 +19,7 @@ export default function InterestCard({ id }) {
             <div className='interest-property-value'><span>{interest.get('name')}</span></div>
 
             <div className='interest-property-label'><span>Type:</span></div>
-            <div><InterestTypeBadge type={type} size='small' /></div>
+            <div><TypeBadge typeMap={INTEREST_TYPE_MAP} type={type} size='small' /></div>
         </div>
     )
 }
