@@ -68,7 +68,6 @@ span#navbar-username-icon {
     margin: 0 12px 0 12px;
 }
 
-/* TODO: Why is the kerning so crowded? Compare with mockup. */
 span#navbar-username {
     font-size: 13px;
     font-style: normal;

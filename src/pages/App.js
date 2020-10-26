@@ -16,6 +16,8 @@ import Skills from './Skills';
 import { Helmet } from 'react-helmet'
 import { addInterest, addSkill, authenticateUser } from '../action-creators'
 
+const ARTIFICIAL_LATENCY_MS = 500;
+
 export default function App() {
     const userName = useSelector(
         state => state.user.get('userName'),
@@ -25,33 +27,41 @@ export default function App() {
 
     React.useEffect(
         () => {
-            // TODO: Remove this (it's just here to make testing easier)
-            if (!userName) {
-                dispatch(authenticateUser('Matthew'))
-                return
+            async function fetchData() {
+                /*
+                // TODO: Remove this (it's just here to make testing easier)
+                if (!userName) {
+                    dispatch(authenticateUser('Matthew'))
+                    return
+                }
+                */
+
+                // Simulate making an asynchronous request to the server.
+                await new Promise((resolve) => setTimeout(resolve, ARTIFICIAL_LATENCY_MS))
+
+                for (const interest of fakeInterests) {
+                    dispatch(addInterest(
+                        interest.id,
+                        interest.name,
+                        interest.type,
+                        interest.current,
+                        interest.detail
+                    ))
+                }
+
+                for (const skill of fakeSkills) {
+                    dispatch(addSkill(
+                        skill.id,
+                        skill.name,
+                        skill.type,
+                        skill.DateLearned,
+                        skill.detail
+                    ))
+                }
             }
 
-            // TODO: First simulate an async request to the server.
-
-            for (const interest of fakeInterests) {
-                dispatch(addInterest(
-                    interest.id,
-                    interest.name,
-                    interest.type,
-                    interest.current,
-                    interest.detail
-                ))
-            }
-
-            for (const skill of fakeSkills) {
-                dispatch(addSkill(
-                    skill.id,
-                    skill.name,
-                    skill.type,
-                    skill.DateLearned,
-                    skill.detail
-                ))
-            }
+            fetchData()
+            
         },
         [ dispatch, userName ]
     )
