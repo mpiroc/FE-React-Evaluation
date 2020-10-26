@@ -1,0 +1,35 @@
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding: 30px 18px 30px 18px;
+
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.skill-container > div {
+    flex: 1;
+}
+
+.skill-name-container {
+    margin-bottom: 18px;
+}
+
+.skill-name-container > span {
+    font-size: 32px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: normal;
+}
+
+.skill-badge-container {
+    margin-bottom: 30px;
+}
+
+.skill-detail-container > span {
+    font-size: 13px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: normal;
+}

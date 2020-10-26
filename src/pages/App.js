@@ -11,6 +11,7 @@ import Interest from './Interest'
 import Interests from './Interests';
 import Login from './Login';
 import NavigationBar from '../components/NavigationBar';
+import Skill from './Skill';
 import Skills from './Skills';
 import { Helmet } from 'react-helmet'
 import { addInterest, addSkill, authenticateUser } from '../action-creators'
@@ -92,6 +93,9 @@ export default function App() {
                 </Route>
                 <Route path="/interest/:id">
                     <Interest />
+                </Route>
+                <Route path="/skill/:id">
+                    <Skill />
                 </Route>
             </Switch>
         </div>
