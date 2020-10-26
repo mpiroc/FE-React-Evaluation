@@ -1,4 +1,4 @@
-.nav-container {
+.navbar-container {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
@@ -6,22 +6,22 @@
     background-color: rgb(66, 80, 91);
 }
 
-.logo-container {
+.navbar-logo-container {
     background-color: rgb(92, 111, 125);
     height: 100%;
     display: flex;
     padding: 12px 24px 12px 24px;
 }
 
-.logo-container > img {
+.navbar-logo-container > img {
     width: 136px;
 }
 
-.spacer {
+.navbar-spacer {
     width: 50%;
 }
 
-nav {
+.navbar-container > nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,14 +35,14 @@ nav {
     padding-right: 12px;
 }
 
-nav > div {
+.navbar-container > nav > div {
     margin: 0px -6px 0px 6px;
     padding: 2px;
     border-left: 1px solid rgb(215, 215, 215);
     width: 100%;
 }
 
-nav > div.navitem > a {
+.navbar-container > nav > div.navbar-item > a {
     margin-left: 24px;
     margin-right: 24px;
     padding-top: 4px;
@@ -51,15 +51,15 @@ nav > div.navitem > a {
     text-decoration-line: none;
 }
 
-nav > div.navitem > a.active {
+.navbar-container > nav > div.navbar-item > a.active {
     border-bottom: 4px solid rgb(236, 134, 67);
 }
 
-nav > div.navitem > a:hover {
+.navbar-container > nav > div.navbar-item > a:hover {
     color: rgb(236, 134, 67);
 }
 
-span#username-icon {
+span#navbar-username-icon {
     font-family: 'Font Awesome 5 Pro Solid', 'Font Awesome 5 Pro';
     font-weight: 900;
     font-style: normal;
@@ -69,7 +69,7 @@ span#username-icon {
 }
 
 /* TODO: Why is the kerning so crowded? Compare with mockup. */
-span#username {
+span#navbar-username {
     font-size: 13px;
     font-style: normal;
     font-weight: 700;

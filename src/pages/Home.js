@@ -4,15 +4,15 @@ import './Home.css';
 import { InterestCardCollection } from '../components/InterestCard'
 import { SkillCardCollection } from '../components/SkillCard'
 
-const MAX_INTERESTS_ON_HOME_PAGE = 5
-const MAX_SKILLS_ON_HOME_PAGE = 5
+const MAX_INTERESTS_ON_HOME_PAGE = 3
+const MAX_SKILLS_ON_HOME_PAGE = 3
 
 export default function Home() {
     const userName = useSelector(state => state.user.get('userName'));
 
     return (
-        <div className="main-content">
-            <p className='welcome-message'>Welcome {userName}</p>
+        <div className="home-main-content">
+            <p className='home-welcome-message'>Welcome {userName}</p>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
                 euismod bibendum laoreet. Proin gravida dolor sit amet lacus
@@ -22,10 +22,10 @@ export default function Home() {
                 pharetra vulputate, felis tellus mollis orci, sed rhoncus
                 pronin sapien nunc accuan eget.
             </p>
-            <h3 className='.section-header'>Your Top Interests</h3>
+            <h3 className='.home-section-header'>Your Top Interests</h3>
             <InterestCardCollection max={MAX_INTERESTS_ON_HOME_PAGE} />
 
-            <h3 className='.section-header'>Your Top Skills</h3>
+            <h3 className='.home-section-header'>Your Top Skills</h3>
             <SkillCardCollection max={MAX_SKILLS_ON_HOME_PAGE} />
         </div>
     )

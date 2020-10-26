@@ -66,7 +66,7 @@ export default function App() {
                     <link href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css" type="text/css" rel="stylesheet" />
                 </Helmet>
 
-                <div className='vertical-spacer' />
+                <div className='App-vertical-spacer' />
                 
                 <Login />
             </div>

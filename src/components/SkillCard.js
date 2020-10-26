@@ -13,12 +13,12 @@ export default function SkillCard({ id }) {
 
     return(
         <div className="skill-card" onClick={() => history.push(`/skill/${id}`)}>
-            <div className='skill-title'>Skill {skill.get('id')}</div>
+            <div className='skill-card-title'>Skill {skill.get('id')}</div>
 
-            <div className='skill-property-label'><span>Name:</span></div>
-            <div className='skill-property-value'><span>{skill.get('name')}</span></div>
+            <div className='skill-card-property-label'><span>Name:</span></div>
+            <div className='skill-card-property-value'><span>{skill.get('name')}</span></div>
 
-            <div className='skill-property-label'><span>Type:</span></div>
+            <div className='skill-card-property-label'><span>Type:</span></div>
             <div><TypeBadge typeMap={SKILL_TYPE_MAP} type={type} size='small' /></div>
         </div>
     )
@@ -34,7 +34,7 @@ export function SkillCardCollection({ max }) {
     }
         
     return (
-        <div className='skills-container'>
+        <div className='skill-cards-container'>
             {skillIds.map(id => <SkillCard id={id} key={id} />)}
         </div>
     )

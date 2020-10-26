@@ -19,7 +19,7 @@
     border-color: rgb(239, 145, 33);
 }
 
-.interest-title {
+.interest-card-title {
     grid-column: 1 / span 2;
     color: rgb(236, 134, 67);
     font-family: 'Open Sans Bold', 'Open Sans';
@@ -29,7 +29,7 @@
     margin: 0 0 12px 0;
 }
 
-.interest-property-label {
+.interest-card-property-label {
     color: rgb(51, 51, 51);
     font-family: 'Open Sans Bold', 'Open Sans';
     font-size: 14px;
@@ -38,7 +38,7 @@
     margin: 6px 0 6px 0;
 }
 
-.interest-property-value {
+.interest-card-property-value {
     color: rgb(51, 51, 51);
     font-family: 'Open Sans';
     font-size: 14px;
@@ -46,7 +46,7 @@
     margin: 6px 0 6px 0;
 }
 
-.interests-container {
+.interest-cards-container {
     display: flex;
     flex-flow: row wrap;
 }

@@ -12,9 +12,6 @@ function getSizeClassName(size) {
 }
 
 export default function TypeBadge({ type, size, typeMap }) {
-    console.log(`type: ${JSON.stringify(type)}`)
-    console.log(`typeMap: ${JSON.stringify(typeMap)}`)
-    console.log(`typeMap[type]: ${JSON.stringify(typeMap[type])}`)
     return (
         <span className={`type-badge type-badge-type-${typeMap[type] || 'unknown'} type-badge-size-${getSizeClassName(size)}`}>
             {type}

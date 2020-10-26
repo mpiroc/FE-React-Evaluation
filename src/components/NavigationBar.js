@@ -8,18 +8,18 @@ export default function NavigationBar() {
     const username = useSelector(state => state.user.get('userName'));
 
     return (
-        <div className='nav-container'>
-            <div className='logo-container'>
-                <img className='logo' src={logo} alt='no.inc logo' />
+        <div className='navbar-container'>
+            <div className='navbar-logo-container'>
+                <img src={logo} alt='no.inc logo' />
             </div>
             
-            <div className='spacer'>.</div>
+            <div className='navbar-spacer'>.</div>
             <nav>
-                <div className='navitem'><NavLink exact to='/'>Home</NavLink></div>
-                <div className='navitem'><NavLink exact to='/interests'>Interests</NavLink></div>
-                <div className='navitem'><NavLink exact to='/skills'>Skills</NavLink></div>
+                <div className='navbar-item'><NavLink exact to='/'>Home</NavLink></div>
+                <div className='navbar-item'><NavLink exact to='/interests'>Interests</NavLink></div>
+                <div className='navbar-item'><NavLink exact to='/skills'>Skills</NavLink></div>
                 <div>
-                    <span id='username'><span id='username-icon'></span>{username}</span>
+                    <span id='navbar-username'><span id='navbar-username-icon'></span>{username}</span>
                 </div>
             </nav>
         </div>

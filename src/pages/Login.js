@@ -11,12 +11,12 @@ export default function Login() {
     const onSubmit = ({ username }) => dispatch(authenticateUser(username))
 
     return (
-        <div className="loginContainer">
-            <div className="logoContainer">
-                <img className="noincLogo" src={logo} alt="no.inc logo" />
+        <div className="login-container">
+            <div className="login-logo-container">
+                <img className="login-noinc-logo" src={logo} alt="no.inc logo" />
             </div>
-            <form className="loginForm" onSubmit={handleSubmit(onSubmit)}>
-                <p className="loginLabel">Login to Our Magic Portal</p>
+            <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
+                <p className="login-label">Login to Our Magic Portal</p>
                 <input type="text" name="username" placeholder="Username" autoComplete="username" ref={register({
                     required: "Required",
                     minLength: {
@@ -51,7 +51,7 @@ export default function Login() {
                 })}/>
                 {errors.password && errors.password.message}
                 
-                <input id="submitButton" type="submit" value="Login" />
+                <input id="login-submit-button" type="submit" value="Login" />
             </form>
         </div>
     )

@@ -13,12 +13,12 @@ export default function InterestCard({ id }) {
 
     return(
         <div className="interest-card" onClick={() => history.push(`/interest/${id}`)}>
-            <div className='interest-title'>Interest {interest.get('id')}</div>
+            <div className='interest-card-title'>Interest {interest.get('id')}</div>
 
-            <div className='interest-property-label'><span>Name:</span></div>
-            <div className='interest-property-value'><span>{interest.get('name')}</span></div>
+            <div className='interest-card-property-label'><span>Name:</span></div>
+            <div className='interest-card-property-value'><span>{interest.get('name')}</span></div>
 
-            <div className='interest-property-label'><span>Type:</span></div>
+            <div className='interest-card-property-label'><span>Type:</span></div>
             <div><TypeBadge typeMap={INTEREST_TYPE_MAP} type={type} size='small' /></div>
         </div>
     )
@@ -34,7 +34,7 @@ export function InterestCardCollection({ max }) {
     }
         
     return (
-        <div className='interests-container'>
+        <div className='interest-cards-container'>
             {interestIds.map(id => <InterestCard id={id} key={id} />)}
         </div>
     )
