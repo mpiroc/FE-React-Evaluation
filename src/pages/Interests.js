@@ -1,6 +1,6 @@
 import React from 'react';
 import './Interests.css';
-import InterestCardCollection from './InterestCardCollection'
+import InterestCardCollection from '../components/InterestCardCollection'
 
 export default function Interests() {
     return (

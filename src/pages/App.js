@@ -10,7 +10,7 @@ import Home from './Home';
 import Interest from './Interest'
 import Interests from './Interests';
 import Login from './Login';
-import NavigationBar from './NavigationBar';
+import NavigationBar from '../components/NavigationBar';
 import Skills from './Skills';
 import { Helmet } from 'react-helmet'
 import { addInterest, addSkill, authenticateUser } from '../action-creators'

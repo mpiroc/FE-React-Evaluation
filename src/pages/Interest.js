@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import './Interest.css'
-import InterestTypeBadge from './InterestTypeBadge'
+import InterestTypeBadge from '../components/InterestTypeBadge'
 
 export default function Interest() {
     const id = parseInt(useParams().id);

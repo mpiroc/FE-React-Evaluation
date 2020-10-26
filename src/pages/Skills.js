@@ -1,6 +1,6 @@
 import React from 'react';
 import './Skills.css';
-import SkillCardCollection from './SkillCardCollection'
+import SkillCardCollection from '../components/SkillCardCollection'
 
 export default function Skills() {
     return (
