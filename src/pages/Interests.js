@@ -1,6 +1,6 @@
 import React from 'react';
 import './Interests.css';
-import { InterestCardCollection } from '../components/InterestCard'
+import { InterestCardCollection } from '../components/InterestCard';
 
 export default function Interests() {
     return (
@@ -8,5 +8,5 @@ export default function Interests() {
             <h3 className='interests-header'>Your Interests</h3>
             <InterestCardCollection />
         </div>
-    )
+    );
 }

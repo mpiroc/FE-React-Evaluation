@@ -1,8 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
 import './Home.css';
-import { InterestCardCollection } from '../components/InterestCard'
-import { SkillCardCollection } from '../components/SkillCard'
+import { InterestCardCollection } from '../components/InterestCard';
+import { SkillCardCollection } from '../components/SkillCard';
 
 const MAX_INTERESTS_ON_HOME_PAGE = 3
 const MAX_SKILLS_ON_HOME_PAGE = 3
@@ -28,5 +28,5 @@ export default function Home() {
             <h3 className='.home-section-header'>Your Top Skills</h3>
             <SkillCardCollection max={MAX_SKILLS_ON_HOME_PAGE} />
         </div>
-    )
+    );
 }

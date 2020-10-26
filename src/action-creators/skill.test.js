@@ -1,8 +1,8 @@
-import { addSkill } from './skill'
-import { ADD_SKILL } from '../action-types'
+import { addSkill } from './skill';
+import { ADD_SKILL } from '../action-types';
 
 it('creates an ADD_SKILL action without crashing', () => {
-    const action = addSkill(0, 'myName', 'myType', '0', 'myDetail')
+    const action = addSkill(0, 'myName', 'myType', '0', 'myDetail');
 
     expect(action.type).toStrictEqual(ADD_SKILL);
     expect(action.skill.get('id')).toStrictEqual(0);

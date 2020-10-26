@@ -1,5 +1,5 @@
 import React from 'react';
-import './TypeBadge.css'
+import './TypeBadge.css';
 
 function getSizeClassName(size) {
     switch(size) {
@@ -7,7 +7,7 @@ function getSizeClassName(size) {
         case 'normal':
             return size;
         default:
-            return 'normal'
+            return 'normal';
     }
 }
 
@@ -16,5 +16,5 @@ export default function TypeBadge({ type, size, typeMap }) {
         <span className={`type-badge type-badge-type-${typeMap[type] || 'unknown'} type-badge-size-${getSizeClassName(size)}`}>
             {type}
         </span>
-    )
+    );
 }

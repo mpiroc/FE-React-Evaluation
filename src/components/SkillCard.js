@@ -1,15 +1,15 @@
 import React from 'react';
-import './SkillCard.css'
-import { useSelector } from 'react-redux'
-import { useHistory } from 'react-router-dom'
-import TypeBadge from './TypeBadge'
-import { SKILL_TYPE_MAP } from '../type-maps'
+import './SkillCard.css';
+import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import TypeBadge from './TypeBadge';
+import { SKILL_TYPE_MAP } from '../type-maps';
 
 export default function SkillCard({ id }) {
-    const skill = useSelector(state => state.skill.get(id))
-    const history = useHistory()
+    const skill = useSelector(state => state.skill.get(id));
+    const history = useHistory();
 
-    const type = skill.get('type')
+    const type = skill.get('type');
 
     return(
         <div className="skill-card" onClick={() => history.push(`/skill/${id}`)}>
@@ -26,11 +26,11 @@ export default function SkillCard({ id }) {
 
 export function SkillCardCollection({ max }) {
     let skillIds = useSelector(state => state.skill)
-        .keySeq()
+        .keySeq();
 
     // 0 is a legitimate value for max, so we can't just test for truthiness.
     if (max !== undefined && max !== null) {
-        skillIds = skillIds.take(max)
+        skillIds = skillIds.take(max);
     }
         
     return (

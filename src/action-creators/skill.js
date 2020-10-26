@@ -1,5 +1,5 @@
-import { ADD_SKILL } from '../action-types'
-import { Map } from 'immutable'
+import { ADD_SKILL } from '../action-types';
+import { Map } from 'immutable';
 
 export function addSkill(id, name, type, DateLearned, detail) {
     return {

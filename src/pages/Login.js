@@ -1,14 +1,14 @@
 import React from 'react';
-import { useForm } from 'react-hook-form'
-import { useDispatch } from 'react-redux'
-import { authenticateUser } from '../action-creators'
+import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { authenticateUser } from '../action-creators';
 import logo from '../logo.png';
 import './Login.css';
 
 export default function Login() {
     const { handleSubmit, register, errors } = useForm();
     const dispatch = useDispatch();
-    const onSubmit = ({ username }) => dispatch(authenticateUser(username))
+    const onSubmit = ({ username }) => dispatch(authenticateUser(username));
 
     return (
         <div className="login-container">
@@ -54,5 +54,5 @@ export default function Login() {
                 <input id="login-submit-button" type="submit" value="Login" />
             </form>
         </div>
-    )
+    );
 }

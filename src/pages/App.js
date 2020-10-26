@@ -4,17 +4,17 @@ import {
     Route,
     Switch
 } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
 import { fakeInterests, fakeSkills } from "../dummy-data";
 import Home from './Home';
-import Interest from './Interest'
+import Interest from './Interest';
 import Interests from './Interests';
 import Login from './Login';
 import NavigationBar from '../components/NavigationBar';
 import Skill from './Skill';
 import Skills from './Skills';
-import { Helmet } from 'react-helmet'
-import { addInterest, addSkill, authenticateUser } from '../action-creators'
+import { Helmet } from 'react-helmet';
+import { addInterest, addSkill } from '../action-creators';
 
 const ARTIFICIAL_LATENCY_MS = 500;
 
@@ -23,21 +23,13 @@ export default function App() {
         state => state.user.get('userName'),
         (left, right) => left.user.get('userName') === right.user.get('userName')
     );
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     React.useEffect(
         () => {
             async function fetchData() {
-                /*
-                // TODO: Remove this (it's just here to make testing easier)
-                if (!userName) {
-                    dispatch(authenticateUser('Matthew'))
-                    return
-                }
-                */
-
                 // Simulate making an asynchronous request to the server.
-                await new Promise((resolve) => setTimeout(resolve, ARTIFICIAL_LATENCY_MS))
+                await new Promise((resolve) => setTimeout(resolve, ARTIFICIAL_LATENCY_MS));
 
                 for (const interest of fakeInterests) {
                     dispatch(addInterest(
@@ -46,7 +38,7 @@ export default function App() {
                         interest.type,
                         interest.current,
                         interest.detail
-                    ))
+                    ));
                 }
 
                 for (const skill of fakeSkills) {
@@ -56,15 +48,15 @@ export default function App() {
                         skill.type,
                         skill.DateLearned,
                         skill.detail
-                    ))
+                    ));
                 }
             }
 
-            fetchData()
+            fetchData();
             
         },
         [ dispatch, userName ]
-    )
+    );
 
 
     if (!userName) {
@@ -109,5 +101,5 @@ export default function App() {
                 </Route>
             </Switch>
         </div>
-    )
+    );
 }

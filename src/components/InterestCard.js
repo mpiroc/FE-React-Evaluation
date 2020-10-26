@@ -1,15 +1,15 @@
 import React from 'react';
-import './InterestCard.css'
-import { useSelector } from 'react-redux'
-import { useHistory } from 'react-router-dom'
-import TypeBadge from './TypeBadge'
-import { INTEREST_TYPE_MAP } from '../type-maps'
+import './InterestCard.css';
+import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import TypeBadge from './TypeBadge';
+import { INTEREST_TYPE_MAP } from '../type-maps';
 
 export default function InterestCard({ id }) {
-    const interest = useSelector(state => state.interest.get(id))
-    const history = useHistory()
+    const interest = useSelector(state => state.interest.get(id));
+    const history = useHistory();
 
-    const type = interest.get('type')
+    const type = interest.get('type');
 
     return(
         <div className="interest-card" onClick={() => history.push(`/interest/${id}`)}>
@@ -26,16 +26,16 @@ export default function InterestCard({ id }) {
 
 export function InterestCardCollection({ max }) {
     let interestIds = useSelector(state => state.interest)
-        .keySeq()
+        .keySeq();
 
     // 0 is a legitimate value for max, so we can't just test for truthiness.
     if (max !== undefined && max !== null) {
-        interestIds = interestIds.take(max)
+        interestIds = interestIds.take(max);
     }
         
     return (
         <div className='interest-cards-container'>
             {interestIds.map(id => <InterestCard id={id} key={id} />)}
         </div>
-    )
+    );
 }
