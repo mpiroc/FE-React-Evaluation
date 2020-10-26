@@ -1,11 +1,14 @@
 import React from 'react';
 import { useSelector } from 'react-redux'
 import './Home.css';
-import InterestCard from './InterestCard'
+import InterestCardCollection from './InterestCardCollection'
+import SkillCardCollection from './SkillCardCollection'
+
+const MAX_INTERESTS_ON_HOME_PAGE = 5
+const MAX_SKILLS_ON_HOME_PAGE = 5
 
 export default function Home() {
     const userName = useSelector(state => state.user.get('userName'));
-    const interests = useSelector(state => state.interest)
 
     return (
         <div className="main-content">
@@ -19,9 +22,11 @@ export default function Home() {
                 pharetra vulputate, felis tellus mollis orci, sed rhoncus
                 pronin sapien nunc accuan eget.
             </p>
-            <div className='interests-container'>
-                {interests.keySeq().map(key => (<InterestCard id={key} />))}
-            </div>
+            <h3 className='.section-header'>Your Top Interests</h3>
+            <InterestCardCollection max={MAX_INTERESTS_ON_HOME_PAGE} />
+
+            <h3 className='.section-header'>Your Top Skills</h3>
+            <SkillCardCollection max={MAX_SKILLS_ON_HOME_PAGE} />
         </div>
     )
 }

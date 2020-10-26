@@ -1,26 +1,24 @@
-.type-value {
+.interest-type-value {
     padding: 3px 6px 3px 6px;
+    color: rgb(244, 249, 253);
 }
 
-.type-sport {
-    color: rgb(244, 249, 253);
+.interest-type-sport {
     background-color: rgb(25, 136, 100);
 }
 
-.type-game {
-    color: rgb(244, 249, 253);
+.interest-type-game {
     background-color: rgb(86, 25, 136)
 }
 
-.type-unknown {
-    color: rgb(244, 249, 253);
+.interest-type-unknown {
     background-color: darkgray;
 }
 
-.size-small {
+.interest-size-small {
     font-size: 10px
 }
 
-.size-normal {
+.interest-size-normal {
     font-size: 14px;
 }

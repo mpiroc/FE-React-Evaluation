@@ -1,7 +1,7 @@
 import React from 'react';
 import './InterestCard.css'
 import { useSelector } from 'react-redux'
-import TypeBadge from './TypeBadge'
+import InterestTypeBadge from './InterestTypeBadge'
 
 export default function InterestCard({ id }) {
     const interest = useSelector(state => state.interest.get(id))
@@ -10,13 +10,13 @@ export default function InterestCard({ id }) {
 
     return(
         <div className="interest-card">
-            <div id='title'>Interest {interest.get('id')}</div>
+            <div className='interest-title'>Interest {interest.get('id')}</div>
 
-            <div className='property-label'><span>Name:</span></div>
-            <div className='property-value'><span>{interest.get('name')}</span></div>
+            <div className='interest-property-label'><span>Name:</span></div>
+            <div className='interest-property-value'><span>{interest.get('name')}</span></div>
 
-            <div className='property-label'><span>Type:</span></div>
-            <div><TypeBadge type={type} size='small' /></div>
+            <div className='interest-property-label'><span>Type:</span></div>
+            <div><InterestTypeBadge type={type} size='small' /></div>
         </div>
     )
 }

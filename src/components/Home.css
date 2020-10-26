@@ -13,9 +13,6 @@
     text-align: start;
 }
 
-.interests-container {
-    display: flex;
-    flex-flow: row wrap;
-    margin-top: 36px;
-    /*justify-content: space-between;*/
+.section-header {
+    margin-top: 48px;
 }

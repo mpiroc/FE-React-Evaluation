@@ -1,4 +1,4 @@
-.interest-card {
+.skill-card {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: auto repeat(3, 1fr);
@@ -12,14 +12,13 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.349019607843137);
     cursor: pointer;
     text-align: left;
-
 }
 
-.interest-card:hover {
+.skill-card:hover {
     border-color: rgb(239, 145, 33);
 }
 
-.interest-title {
+.skill-title {
     grid-column: 1 / span 2;
     color: rgb(236, 134, 67);
     font-family: 'Open Sans Bold', 'Open Sans';
@@ -29,7 +28,7 @@
     margin: 0 0 12px 0;
 }
 
-.interest-property-label {
+.skill-property-label {
     color: rgb(51, 51, 51);
     font-family: 'Open Sans Bold', 'Open Sans';
     font-size: 14px;
@@ -38,7 +37,7 @@
     margin: 6px 0 6px 0;
 }
 
-.interest-property-value {
+.skill-property-value {
     color: rgb(51, 51, 51);
     font-family: 'Open Sans';
     font-size: 14px;

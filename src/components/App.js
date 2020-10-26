@@ -23,13 +23,11 @@ export default function App() {
 
     React.useEffect(
         () => {
-            /*
             // TODO: Remove this (it's just here to make testing easier)
             if (!userName) {
                 dispatch(authenticateUser('Matthew'))
                 return
             }
-            */
 
             // TODO: First simulate an async request to the server.
 

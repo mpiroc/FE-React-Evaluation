@@ -1,0 +1,29 @@
+.skill-type-value {
+    padding: 3px 6px 3px 6px;
+    color: rgb(244, 249, 253);
+}
+
+.skill-type-essential {
+    background-color: rgb(25, 136, 100);
+}
+
+.skill-type-practical {
+    
+    background-color: rgb(86, 25, 136)
+}
+
+.skill-type-professional {
+    background-color: rgb(200, 37, 154);
+}
+
+.skill-type-unknown {
+    background-color: darkgray;
+}
+
+.skill-size-small {
+    font-size: 10px
+}
+
+.skill-size-normal {
+    font-size: 14px;
+}
