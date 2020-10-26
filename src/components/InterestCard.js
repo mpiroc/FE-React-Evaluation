@@ -24,3 +24,18 @@ export default function InterestCard({ id }) {
     )
 }
 
+export function InterestCardCollection({ max }) {
+    let interestIds = useSelector(state => state.interest)
+        .keySeq()
+
+    // 0 is a legitimate value for max, so we can't just test for truthiness.
+    if (max !== undefined && max !== null) {
+        interestIds = interestIds.take(max)
+    }
+        
+    return (
+        <div className='interests-container'>
+            {interestIds.map(id => <InterestCard id={id} key={id} />)}
+        </div>
+    )
+}

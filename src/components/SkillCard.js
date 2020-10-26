@@ -5,8 +5,7 @@ import { useHistory } from 'react-router-dom'
 import TypeBadge from './TypeBadge'
 import { SKILL_TYPE_MAP } from '../type-maps'
 
-// TODO: Make interests and skills more DRY.
-export default function InterestCard({ id }) {
+export default function SkillCard({ id }) {
     const skill = useSelector(state => state.skill.get(id))
     const history = useHistory()
 
@@ -21,6 +20,22 @@ export default function InterestCard({ id }) {
 
             <div className='skill-property-label'><span>Type:</span></div>
             <div><TypeBadge typeMap={SKILL_TYPE_MAP} type={type} size='small' /></div>
+        </div>
+    )
+}
+
+export function SkillCardCollection({ max }) {
+    let skillIds = useSelector(state => state.skill)
+        .keySeq()
+
+    // 0 is a legitimate value for max, so we can't just test for truthiness.
+    if (max !== undefined && max !== null) {
+        skillIds = skillIds.take(max)
+    }
+        
+    return (
+        <div className='skills-container'>
+            {skillIds.map(id => <SkillCard id={id} key={id} />)}
         </div>
     )
 }

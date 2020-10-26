@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux'
 import './Home.css';
-import InterestCardCollection from '../components/InterestCardCollection'
-import SkillCardCollection from '../components/SkillCardCollection'
+import { InterestCardCollection } from '../components/InterestCard'
+import { SkillCardCollection } from '../components/SkillCard'
 
 const MAX_INTERESTS_ON_HOME_PAGE = 5
 const MAX_SKILLS_ON_HOME_PAGE = 5

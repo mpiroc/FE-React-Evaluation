@@ -45,3 +45,7 @@
     margin: 6px 0 6px 0;
 }
 
+.skills-container {
+    display: flex;
+    flex-flow: row wrap;
+}
