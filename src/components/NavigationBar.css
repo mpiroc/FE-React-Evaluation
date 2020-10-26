@@ -65,7 +65,7 @@ span#username-icon {
     font-style: normal;
     font-size: 14px;
     color: #FFFFFF;
-    margin-right: 12px;
+    margin: 0 12px 0 12px;
 }
 
 /* TODO: Why is the kerning so crowded? Compare with mockup. */
@@ -75,4 +75,5 @@ span#username {
     font-weight: 700;
     font-family: "Open Sans Bold", "Open Sans";
     color: rgb(244, 249, 253);
+    margin-right: 12px;
 }
